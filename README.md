@@ -5,39 +5,24 @@
 </center>
 
 
-# Nano Vaadin - Ramp up in a second.
-A nano project to start a Vaadin project. Perfect for Micro-UIs packed as fat jar in a docker image.
+# Vaadin Combobox with dynamic data
+In this example we are working with the Combobox itself.
+So far we have the Vaadin V8 version.
+The target will be to deal with a data set that is far to big to hold it inside the session itself.
 
-## target of this project
-The target of this project is a minimal ramp-up time for a first hello world.
-Why we need one more HelloWorld? Well, the answer is quite easy. 
-If you have to try something out, or you want to make a small POC to present something,
-there is no time and budget to create a demo project?
+Different versions of Vaadin will provide different version of how to deal with this issue.
+If you have V7 code and you want to migrate to V8 or V10, you need to know how to change 
+the basic structure.
 
-You don´t want to copy paste all small things together.
-Here you will get a Nano-Project that will give you all in a second.
+## Nano Vaadin Meecrowave
+To start the Servletcontainer I am using the approach from the Nano Vaadin Meecrowave Example.
+This example you can find here: [https://github.com/Nano-Vaadin-Demos/nano-vaadin-meecrowave](https://github.com/Nano-Vaadin-Demos/nano-vaadin-meecrowave)
 
-Clone the repo and start editing the class ```HelloWorld```.
-Nothing more. 
+With this you can create a fat - jar, perfect for Micro-UIs packed in a docker image.
 
-## How does it work?
-The project is based on meecrowave from Apache. 
+Meecrowave from Apache you can find here: 
 [http://openwebbeans.apache.org/meecrowave/index.html](http://openwebbeans.apache.org/meecrowave/index.html)
 
-You can see the basic init for the Servlet-Container in the main method.
-
-```java
-      new Meecrowave(new Meecrowave.Builder() {
-        {
-          randomHttpPort();
-          setTomcatScanning(true);
-          setTomcatAutoSetup(false);
-          setHttp2(true);
-        }
-      })
-          .bake()
-          .await();
-```
 
 Happy Coding.
 

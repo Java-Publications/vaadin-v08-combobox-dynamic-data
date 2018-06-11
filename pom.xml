@@ -88,7 +88,13 @@
     <meecrowave.version>1.2.1</meecrowave.version>
   </properties>
 
-
+  <repositories>
+    <!--for V7 addon Viritin-->
+    <repository>
+      <id>vaadin-addons</id>
+      <url>http://maven.vaadin.com/vaadin-addons</url>
+    </repository>
+  </repositories>
 
   <dependencyManagement>
     <dependencies>
@@ -146,17 +152,25 @@
       <artifactId>vaadin-client-compiled</artifactId>
     </dependency>
 
+
+    <!--Vaadin V7 inside V8-->
+    <dependency>
+      <groupId>com.vaadin</groupId>
+      <artifactId>vaadin-compatibility-client-compiled</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.vaadin</groupId>
+      <artifactId>vaadin-compatibility-server</artifactId>
+    </dependency>
+
+
+
+
     <!--For some examples-->
     <dependency>
       <groupId>com.vaadin</groupId>
       <artifactId>vaadin-push</artifactId>
-    </dependency>
-
-
-    <dependency>
-      <groupId>org.mapdb</groupId>
-      <artifactId>mapdb</artifactId>
-      <version>3.0.7</version>
     </dependency>
 
 
